@@ -1,0 +1,409 @@
+/* Variables */
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: rgb(78, 87, 212);
+    --c-body: #727272;
+    --font-base: 'Poppins', sans-serif;
+    --box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.08);
+    --transition: all .6s ease;
+}
+
+/* Variables */
+
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--c-brand);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.image-zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img {
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Navigation Bar */
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 100;
+    color: var(--c-dark);
+    justify-content: space-between;
+    font-size: .85rem;
+    margin-right: .6rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.btn {
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    color: white;
+    border-color: var(--c-brand);
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+/* Heade Section */
+
+#hero {
+    background: linear-gradient(rgba(163, 159, 189, 0.505), rgba(148, 141, 182, 0.455)), url("../assets/images/hero.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* About Section */
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 5px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iconbox {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-brand);
+    flex: none;
+    font-size: 35px;
+}
+
+
+/* Services Section */
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background: rgba(78, 87, 212, .2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: white;
+}
+
+.service:hover .iconbox {
+    color: white;
+}
+
+/* Portfolio */
+
+.portfolio-item .iconbox {
+    background-color: var(--c-brand);
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+    opacity: 1;
+    top: 50%;
+}
+
+/* Video Preview Section */
+.video-preview {
+    background: url('../assets/images/video_preview.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    /* Initial opacity for the background image */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Collaborators Section */
+
+.collab-head {
+    position: relative;
+}
+
+.collab-head p {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--c-body);
+}
+
+.collab-head::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    bottom: -14px;
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background-position: center;
+    background-size: cover;
+    background: url("../assets/images/5.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+/* Footer Section */
+
+footer li,
+footer p,
+footer a {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+}
+
+.social-icons a i {
+    font-size: 25px;
+}
+
+.social-icons_collab a i {
+    font-size: 20px;
+    color: var(--c-dark);
+}
+
+footer .line {
+    width: 50px;
+    height: 5px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.footer-bottom .footer-bottom-last {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+/* ============== Project Structure ================ */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    /* You can set a max-width for large screens */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 15px;
+    /* Add some padding */
+}
+
+.code-section {
+    background-color: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+
+.code-container {
+    background-color: white;
+    color: #ffffff;
+    overflow-x: auto;
+    /* Makes code scrollable horizontally if it's too wide */
+    padding: 15px;
+    border-radius: 4px;
+}
+
+pre {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+code {
+    white-space: pre;
+    /* Ensures that whitespace is preserved */
+    line-height: 1.5;
+    /* Adjust line height for readability */
+}
+
+@media screen and (max-width: 768px) {
+
+    /* For tablets and below */
+    .code-container {
+        padding: 10px;
+        font-size: 14px;
+        /* Smaller font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* For mobile phones */
+    .container {
+        padding: 0 10px;
+        /* Less padding on smaller screens */
+    }
+
+    .code-container {
+        font-size: 12px;
+        /* Even smaller font size */
+    }
+}

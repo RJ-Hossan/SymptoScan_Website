@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Md Hossan R." />
+    <title>SymptoScan | Disease Predictor</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Code Highlighter Prism -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+
+</head>
+
+<!-- Body Starts From Here -->
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Sympto<span style="color: red; font-weight: 700;">Scan</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html#motivation">Motivation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="structure.html"
+                            style="color: #4e57d4;">Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html#application">Appplications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/RJ-Hossan/SymptoScan_Disease_Suggesting_App" target="_blank"
+                    class="btn btn-brand ms-lg-3">Download</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends Here -->
+
+    <!-- About Section Starts Here -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Project SymptoScan</h1>
+                        <div class="line"></div>
+                        <p>-Empowering Your Health Journey with Predictive Insights and Informed Wellness Choices-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="assets/images/structure.png" alt="">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h4>Project Structure</h4>
+                    <p class="mt-3 mb-4" style="text-align: justify;">
+                        <span style="color: #4e57d4;">SymptoScan- </span>your health guardian, seamlessly predicting
+                        diseases, offering personalized health insights, and fostering a proactive well-being revolution
+                        through cutting-edge technology and user-centric design.
+                    </p>
+                    <div class="d-flex">
+                        <ul>
+                            <li>Flutter and Firebase-based application with a clean and modular structure.</li>
+                            <li>Organized into essential directories such as <code>lib</code> for Flutter code and
+                                <code>functions</code> for Firebase Cloud Functions.</li>
+                            <li><code>lib</code> further divided into logical sections like <code>screens</code>,
+                                <code>widgets</code>, and <code>services</code> for clarity.</li>
+                            <li>Utilizes Firebase services for features like authentication, database, and cloud
+                                functions.</li>
+                            <li>Follows the Flutter best practices for file naming and structure.</li>
+                            <li>Implements the Model-View-Controller (MVC) architecture for maintainability and
+                                scalability.</li>
+                            <li>Leverages Flutter packages for additional functionality, enhancing development
+                                efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends Here -->
+
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="code-section">
+                <div class="code-container">
+                    <h1>Code de main.dart</h1>
+                    <!-- Embed Flutter Dart code using <pre> and <code> -->
+                    <pre class="code language-dart"><code>
+                        import 'dart:io';
+                        import 'package:firebase_core/firebase_core.dart';
+                        import 'package:flutter/material.dart';
+                        import 'package:symptoscan/onboard.dart';
+                        import 'package:symptoscan/healthTips.dart';
+                        import 'LoginScreen.dart';
+                        
+                        Future main() async {
+                          WidgetsFlutterBinding.ensureInitialized();
+                          Platform.isAndroid
+                              ? await Firebase.initializeApp(
+                                  options: const FirebaseOptions(
+                                      apiKey: "AIzaSyDIH2j0aCaGsPKia4Eyxt8RJ4SKS0N3I3Y",
+                                      appId: "1:65940199642:android:ef2aad26c56a2baeeeade3",
+                                      messagingSenderId: "65940199642",
+                                      projectId: "symptoscan-3fa23"),
+                                )
+                              : Firebase.initializeApp(); // Initialize Firebase
+                          runApp(const MyApp());
+                        }
+                        
+                        class MyApp extends StatelessWidget {
+                          const MyApp({super.key});
+                        
+                          @override
+                          Widget build(BuildContext context) {
+                            return MaterialApp(
+                              debugShowCheckedModeBanner: false,
+                              home: onBoard(),
+                            );
+                          }
+                        }
+                        
+                    </code></pre>
+                </div>
+
+                <div class="code-container">
+                    <h1>Code de MainHomeScreen.dart</h1>
+                    <!-- Embed Flutter Dart code using <pre> and <code> -->
+                    <pre class="code language-dart"><code>
+                        import 'package:flutter/material.dart';
+
+                        void main() {
+                        runApp(MainHomeScreen());
+                        }
+
+                        class MainHomeScreen extends StatelessWidget {
+                        @override
+                        Widget build(BuildContext context) {
+                            return MaterialApp(
+                            title: 'Health App',
+                            theme: ThemeData(
+                                primarySwatch: Colors.blue,
+                            ),
+                            home: HomePage(),
+                            );
+                        }
+                        }
+
+                        class HomePage extends StatefulWidget {
+                        @override
+                        _HomePageState createState() => _HomePageState();
+                        }
+
+                        class _HomePageState extends State<HomePage> {
+                        int _currentIndex = 0;
+
+                        final List<Widget> _tabs = [
+                            HealthTipsPage(),
+                            ChatbotPage(),
+                            ProfilePage(),
+                        ];
+
+                        @override
+                        Widget build(BuildContext context) {
+                            return Scaffold(
+                            appBar: AppBar(
+                                title: Text('Health App'),
+                            ),
+                            body: _tabs[_currentIndex],
+                            bottomNavigationBar: BottomNavigationBar(
+                                currentIndex: _currentIndex,
+                                onTap: (index) {
+                                setState(() {
+                                    _currentIndex = index;
+                                });
+                                },
+                                items: [
+                                BottomNavigationBarItem(
+                                    icon: Icon(Icons.lightbulb_outline),
+                                    label: 'Health Tips',
+                                ),
+                                BottomNavigationBarItem(
+                                    icon: Icon(Icons.chat),
+                                    label: 'Chatbot',
+                                ),
+                                BottomNavigationBarItem(
+                                    icon: Icon(Icons.person),
+                                    label: 'Profile',
+                                ),
+                                ],
+                            ),
+                            );
+                        }
+                        }
+
+                        class HealthTipsPage extends StatelessWidget {
+                        @override
+                        Widget build(BuildContext context) {
+                            return Center(
+                            child: Text('Health Tips Page'),
+                            );
+                        }
+                        }
+
+                        class ChatbotPage extends StatelessWidget {
+                        @override
+                        Widget build(BuildContext context) {
+                            return Center(
+                            child: Text('Chatbot Page'),
+                            );
+                        }
+                        }
+
+                        class ProfilePage extends StatelessWidget {
+                        @override
+                        Widget build(BuildContext context) {
+                            return Center(
+                            child: Text('Profile Page'),
+                            );
+                        }
+                        }
+
+                    </code></pre>
+                </div>
+                <div class="code-container">
+                    <h1>Code de LoginScreen.dart</h1>
+                    <!-- Embed Flutter Dart code using <pre> and <code> -->
+                    <pre class="code language-dart"><code>
+                        import 'package:flutter/material.dart';
+                        import 'package:symptoscan/CreateAccount.dart';
+                        import 'package:symptoscan/HomeScreen.dart';
+                        import 'package:symptoscan/Methods.dart';
+                        import 'package:symptoscan/LoginScreen.dart';
+
+                        import 'HomeScreen.dart';
+
+                        class LoginScreen extends StatefulWidget {
+                        const LoginScreen({super.key});
+
+                        @override
+                        State<LoginScreen> createState() => _LoginScreenState();
+                        }
+
+                        class _LoginScreenState extends State<LoginScreen> {
+                        final TextEditingController _email = TextEditingController();
+                        final TextEditingController _password = TextEditingController();
+                        bool isLoading = false;
+
+                        @override
+                        Widget build(BuildContext context) {
+                            final size = MediaQuery.of(context).size;
+                            return Scaffold(
+                            body: isLoading
+                                ? Center(
+                                    child: Container(
+                                        height: size.height / 20,
+                                        width: size.height / 20,
+                                        child: CircularProgressIndicator(),
+                                    ),
+                                    )
+                                : SingleChildScrollView(
+                                    child: Column(
+                                        children: [
+                                        SizedBox(
+                                            height: size.height / 20,
+                                        ),
+                                        Container(
+                                            alignment: Alignment.centerLeft,
+                                            height: size.height / 10,
+                                            width: size.width / 1.2,
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 50,
+                                        ),
+                                        Container(
+                                            width: size.width / 1.3,
+                                            child: Text(
+                                            "Welcome",
+                                            style:
+                                                TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                                            ),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                            child: Container(
+                                            width: size.width / 1.3,
+                                            child: Text(
+                                                "Sign In to Continue!",
+                                                style: TextStyle(
+                                                color: Colors.grey[700],
+                                                fontSize: 22,
+                                                fontWeight: FontWeight.w300,
+                                                ),
+                                            ),
+                                            ),
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 10,
+                                        ),
+                                        Container(
+                                            width: size.width,
+                                            alignment: Alignment.center,
+                                            child: field(
+                                                size, "E-mail Address", Icons.account_box, _email),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 18.0),
+                                            child: Container(
+                                            width: size.width,
+                                            alignment: Alignment.center,
+                                            child: field(size, "Password", Icons.lock, _password),
+                                            ),
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 10,
+                                        ),
+                                        customButton(size),
+                                        SizedBox(
+                                            height: size.height / 40,
+                                        ),
+                                        GestureDetector(
+                                            onTap: () => Navigator.of(context).push(
+                                                MaterialPageRoute(builder: (_) => CreateAccount())),
+                                            child: Text(
+                                            "Create Account!",
+                                            style: TextStyle(
+                                                color: Colors.blue,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                            ),
+                                            ),
+                                        )
+                                        ],
+                                    ),
+                                    ),
+                            );
+                        }
+
+                        Widget customButton(Size size) {
+                            return GestureDetector(
+                            onTap: () {
+                                if (_email.text.isNotEmpty && _password.text.isNotEmpty) {
+                                setState(() {
+                                    isLoading = true;
+                                });
+                                logIn(_email.text, _password.text).then((user) {
+                                    if (user != null) {
+                                    print("Login Successful!!!");
+                                    setState(() {
+                                        isLoading = false;
+                                    });
+                                    Navigator.push(
+                                        context, MaterialPageRoute(builder: (_) => HomeScreen()));
+                                    } else {
+                                    print("Login Failed.");
+                                    setState(() {
+                                        isLoading = false;
+                                    });
+
+                                    // Show a dialog with an error message
+                                    showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                        return AlertDialog(
+                                            title: Text('Login Failed'),
+                                            content: Text('Please enter correct Email Address and Password.'),
+                                            actions: <Widget>[
+                                            TextButton(
+                                                onPressed: () {
+                                                Navigator.of(context).pop(); // Close the dialog
+                                                },
+                                                child: Text('OK'),
+                                            ),
+                                            ],
+                                        );
+                                        },
+                                    );
+                                    }
+
+                                });
+                                } else {
+                                print("Please fill up all details!");
+                                setState(() {
+                                    isLoading = false;
+                                });
+
+                                // Show a dialog with an error message
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                    return AlertDialog(
+                                        title: Text('Validation Error'),
+                                        content: Text('Please fill up all details!'),
+                                        actions: <Widget>[
+                                        TextButton(
+                                            onPressed: () {
+                                            Navigator.of(context).pop(); // Close the dialog
+                                            },
+                                            child: Text('OK'),
+                                        ),
+                                        ],
+                                    );
+                                    },
+                                );
+                                }
+
+                            },
+                            child: Container(
+                                height: size.height / 14,
+                                width: size.width / 1.3,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5), color: Colors.blue),
+                                child: Text("Sign In",
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    )),
+                            ),
+                            );
+                        }
+
+                        Widget field(
+                            Size size, String hintText, IconData icon, TextEditingController cont) {
+                            return Container(
+                            height: size.height / 15,
+                            width: size.width / 1.3,
+                            child: TextField(
+                                controller: cont,
+                                decoration: InputDecoration(
+                                    prefixIcon: Icon(icon),
+                                    hintText: hintText,
+                                    hintStyle: TextStyle(color: Colors.grey),
+                                    border:
+                                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
+                            ),
+                            );
+                        }
+                        }
+
+                    </code></pre>
+                </div>
+                <div class="code-container">
+                    <h1>Code de CreateAccount.dart</h1>
+                    <!-- Embed Flutter Dart code using <pre> and <code> -->
+                    <pre class="code language-dart"><code>
+                        import 'package:flutter/material.dart';
+                        import 'package:symptoscan/HomeScreen.dart';
+                        import 'package:symptoscan/LoginScreen.dart';
+                        import 'package:symptoscan/Methods.dart';
+
+                        class CreateAccount extends StatefulWidget {
+                        const CreateAccount({super.key});
+
+                        @override
+                        State<CreateAccount> createState() => _CreateAccountState();
+                        }
+
+                        class _CreateAccountState extends State<CreateAccount> {
+                        final TextEditingController _name = TextEditingController();
+                        final TextEditingController _email = TextEditingController();
+                        final TextEditingController _password = TextEditingController();
+                        bool isLoading = false;
+
+                        @override
+                        Widget build(BuildContext context) {
+                            final size = MediaQuery.of(context).size;
+
+                            return Scaffold(
+                            body: isLoading
+                                ? Center(
+                                    child: Container(
+                                        height: size.height / 20,
+                                        width: size.height / 20,
+                                        foregroundDecoration: null,
+                                        child: CircularProgressIndicator(),
+                                    ),
+                                    )
+                                : SingleChildScrollView(
+                                    child: Column(
+                                        children: [
+                                        SizedBox(
+                                            height: size.height / 20,
+                                        ),
+                                        Container(
+                                            alignment: Alignment.centerLeft,
+                                            height: size.height / 10,
+                                            width: size.width / 1.2,
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 50,
+                                        ),
+                                        Container(
+                                            width: size.width / 1.3,
+                                            child: Text(
+                                            "Welcome",
+                                            style:
+                                                TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                                            ),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                            child: Container(
+                                            width: size.width / 1.3,
+                                            child: Text(
+                                                "Sign Up to Continue!",
+                                                style: TextStyle(
+                                                color: Colors.grey[700],
+                                                fontSize: 22,
+                                                fontWeight: FontWeight.w300,
+                                                ),
+                                            ),
+                                            ),
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 20,
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 18.0),
+                                            child: Container(
+                                            width: size.width,
+                                            alignment: Alignment.center,
+                                            child: field(size, "Full Name", Icons.account_box, _name),
+                                            ),
+                                        ),
+                                        Container(
+                                            width: size.width,
+                                            alignment: Alignment.center,
+                                            child: field(
+                                                size, "E-mail Address", Icons.account_box, _email),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 18.0),
+                                            child: Container(
+                                            width: size.width,
+                                            alignment: Alignment.center,
+                                            child: field(size, "Password", Icons.lock, _password),
+                                            ),
+                                        ),
+                                        SizedBox(
+                                            height: size.height / 20,
+                                        ),
+                                        customButton(size),
+                                        GestureDetector(
+                                            onTap: () => Navigator.pop(context),
+                                            child: Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 20.0),
+                                            child: Text(
+                                                "Already have an account?",
+                                                style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                ),
+                                            ),
+                                            ),
+                                        ),
+                                        ],
+                                    ),
+                                    ),
+                            );
+                        }
+
+                        Widget customButton(Size size) {
+                            return GestureDetector(
+                            onTap: () {
+                                if (_name.text.isNotEmpty &&
+                                    _email.text.isNotEmpty &&
+                                    _password.text.isNotEmpty) {
+                                setState(() {
+                                    isLoading = true;
+                                });
+
+                                createAccount(_name.text, _email.text, _password.text).then((user) {
+                                    if (user != null) {
+                                    setState(() {
+                                        isLoading = false;
+                                    });
+                                    Navigator.push(
+                                        context, MaterialPageRoute(builder: (_) => HomeScreen()));
+                                    } else {
+                                    print("Account Creation Failed!!!");
+                                    setState(() {
+                                        isLoading = false;
+                                    });
+                                    }
+                                });
+                                } else {
+                                print("Please enter your credentials.");
+                                }
+                            },
+                            child: Container(
+                                height: size.height / 14,
+                                width: size.width / 1.3,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5), color: Colors.blue),
+                                child: Text("Create Account",
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    )),
+                            ),
+                            );
+                        }
+
+                        Widget field(
+                            Size size, String hintText, IconData icon, TextEditingController cont) {
+                            return Container(
+                            height: size.height / 15,
+                            width: size.width / 1.3,
+                            child: TextField(
+                                controller: cont,
+                                decoration: InputDecoration(
+                                    prefixIcon: Icon(icon),
+                                    hintText: hintText,
+                                    hintStyle: TextStyle(color: Colors.grey),
+                                    border:
+                                        OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
+                            ),
+                            );
+                        }
+                        }
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="https://github.com/RJ-Hossan/SymptoScan_Disease_Suggesting_App" target="_blank"
+                class="btn btn-brand" style="margin-top: 30px;">Load More</a>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-light" data-aos="fade-up" data-aos-delay="175">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4 col-sm-6 p-8">
+                        <a href="">
+                            <img src="./assets/images/Brand_Logo.png" alt="" width="120px" height="50px">
+                        </a>
+                        <p style="text-align: justify;">Empowering Your Health Journey with Predictive Insights and
+                            Informed Wellness Choices
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="mt-5 mb-0 text-black">About</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="/index.html#motivation">Motivation</a></li>
+                            <li><a href="/index.html#application">Applications</a></li>
+                            <li><a href="/structure.html">Project Structure</a></li>
+                            <li><a href="/features.html">Features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="mt-5 mb-0 text-black">Contact</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>+880 15215 79196</li>
+                            <li>ignitedminds326@gmail.com</li>
+                            <li>Chattogram-4349, Bangladesh</li>
+                            <li><a href="#">View Site</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p class="mt-4 mb-1 footer-bottom-last">© Copyright SymptoScan. All rights reserved | 2024</p>
+                        <p class="mb-1 footer-bottom-last">Developed by <a href="https://refaj-hossan.vercel.app/"
+                                target="_blank" style="text-decoration: underline;">Md Hossan R.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Ends Here -->
+
+    <!-- Vendor Js Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+
+    <!-- Js File -->
+    <script src="assets/main.js"></script>
+
+</body>
+<!-- Body Section Ends Here -->
+
+</html>

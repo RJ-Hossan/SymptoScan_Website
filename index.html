@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Md Hossan R." />
+    <title>SymptoScan | Disease Predictor</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+
+</head>
+
+<!-- Body Starts From Here -->
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Sympto<span style="color: red; font-weight: 700;">Scan</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#motivation">Motivation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/structure.html">Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#application">Appplications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/RJ-Hossan/SymptoScan_Disease_Suggesting_App" target="_blank"
+                    class="btn btn-brand ms-lg-3">Download</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends Here -->
+
+    <!-- Header Section Starts Here -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container" data-aos="zoom-in-up">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-uppercase text-black fw-semibold display-1">Welcome to Symptoscan</h2>
+                    <h5 class="text-black mt-3 mb-4">Empowering Your Health Journey with Predictive Insights and
+                        Informed Wellness Choices
+                    </h5>
+                    <div>
+                        <a href="#services" class="btn btn-brand me-2" data-aos="zoom-in-up">Get Started</a>
+                        <a href="mailto:mdrefajhossan@gmail.com" target="_blank" class="btn btn-light ms-3"
+                            data-aos="zoom-in-up">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Section Ends Here -->
+
+    <!-- Header Features Starts Here-->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+
+            <div class="row g-5 text-center">
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox" style="color: rgb(88, 212, 171); font-size: 70px;">
+                            <i class="ri-centos-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">User-Friendly Interface</h5>
+                        <p>The user interfaces are designed with a focus on simplicity and
+                            clarity, allowing users to navigate.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-down" data-aos-delay="250">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox" style="color: rgb(134, 132, 223); font-size: 70px;">
+                            <i class="ri-hospital-line"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Disease Prediction</h5>
+                        <p>Users are able to input their symptoms, which will then use Machine Learning to predict the
+                            diseases.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-down" data-aos-delay="350">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox" style="color: rgb(223, 132, 159); font-size: 70px;">
+                            <i class="ri-health-book-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Health Education</h5>
+                        <p>The app features a comprehensive information of diseases,
+                            including symptoms, remedies etc.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Header Features Ends Here -->
+
+    <!-- About Section Starts Here -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Project SymptoScan</h1>
+                        <div class="line"></div>
+                        <p>-Empowering Your Health Journey with Predictive Insights and Informed Wellness Choices-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="assets/images/features/feature-1.png" alt="">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h4>About SymmptoScan</h4>
+                    <p class="mt-3 mb-4" style="text-align: justify;">
+                        <span style="color: #4e57d4;">SymptoScan- </span>your health guardian, seamlessly predicting
+                        diseases, offering personalized health insights, and fostering a proactive well-being revolution
+                        through cutting-edge technology and user-centric design.
+                    </p>
+                    <div class="d-flex pt-4 mb-3">
+                        <div class="iconbox me-4" style="color: rgb(88, 212, 171); font-size: 50px;">
+                            <i class="ri-bar-chart-fill"></i>
+                        </div>
+                        <div>
+                            <h5>
+                                Machine Learning Model
+                            </h5>
+                            <p style="font-size: small; text-align: justify;">The core of “SymptoScan” lies in its
+                                machine learning model,
+                                meticulously trained to predict 41 types of diseases which are mainly pre-trained model
+                                used for implementation of this application from <a
+                                    href="https://huggingface.co/shanover/symps_disease_bert_v3_c41/"
+                                    target="_blank">HuggingFace</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="iconbox me-4" style="color: rgb(134, 132, 223); font-size: 50px;">
+                            <i class="ri-microscope-line"></i>
+                        </div>
+                        <div>
+                            <h5>
+                                Disease Suggestion Section
+                            </h5>
+                            <p style="font-size: small; text-align: justify;">Users are able to input their symptoms and
+                                health
+                                information into the app, which will then utilize a machine learning model to provide
+                                predictions about potential diseases.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="iconbox me-4" style="color: rgb(223, 132, 159); font-size: 50px;">
+                            <i class="ri-health-book-line"></i>
+                        </div>
+                        <div>
+                            <h5>
+                                Health Education Section
+                            </h5>
+                            <p style="font-size: small; text-align: justify;">The app features a comprehensive
+                                information of diseases,
+                                including information about symptoms, risk factors, prevention strategies, and available
+                                treatments.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends Here -->
+
+    <!-- Motivation Section Starts Here -->
+    <section id="motivation" class="section-padding border-top">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Motivation</h1>
+                        <div class="line"></div>
+                        <p>- Inspiring Proactive Wellness, Empowering Lives through Cutting-Edge Predictive Health
+                            Technology-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 text-center">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Empowering Early Intervention</h5>
+                        <p>
+                            Providing users with predictive insights to empower early intervention and
+                            preventive measures, transforming the narrative of healthcare from reactive
+                            to proactive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Revolutionizing Disease Detection</h5>
+                        <p>Driving a paradigm shift in disease detection, SymptoScan leverages advanced
+                            machine learning to predict 41 diseases, revolutionizing the way we approach
+                            health diagnostics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Transformative User Experience</h5>
+                        <p>SymptoScan redefines the user experience, delivering not just an app but a transformative
+                            tool that prioritizes psychological aspects, creating a supportive
+                            health interaction.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Cultivating a Culture of Wellness</h5>
+                        <p>Beyond prediction, SymptoScan cultivates a culture of wellness by actively
+                            engaging users in their health journey, fostering awareness, and encouraging
+                            proactive health management as well.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Inspiring Informed Decision-Making</h5>
+                        <p>Inspiring users to make informed health decisions by providing comprehensive information
+                            on symptoms, prevention strategies, and remedies through the intuitive Health Tips section.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-stack-fill"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Democratizing Healthcare Access</h5>
+                        <p>Bridging gaps in healthcare by democratizing access to cutting-edge disease
+                            prediction, health education, and empowerment tools, ensuring inclusivity
+                            for users globally.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Motivation Section Ends Here -->
+
+    <!-- Portfolio Section Starts Here -->
+    <section class="section-padding" id="portfolio">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Project Portfolio</h1>
+                        <div class="line"></div>
+                        <p>-Turning Vision into Reality: A Visual Journey Through Our Project-"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="portfolio-item image-zoom" data-aos="fade-down" data-aos-delay="150">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/1.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/1.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item image-zoom mt-4" data-aos="fade-down" data-aos-delay="250">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/3.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/3.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-item image-zoom" data-aos="fade-down" data-aos-delay="350">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/6.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/6.jpg" data-fancybox="gallery" data-caption="Caption #1"
+                            class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item image-zoom mt-4" data-aos="fade-down" data-aos-delay="450">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/5.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/5.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-item image-zoom" data-aos="fade-down" data-aos-delay="550">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/4.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/4.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item image-zoom mt-4" data-aos="fade-down" data-aos-delay="650">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/portfolio/8.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/portfolio/8.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section Ends Here -->
+
+
+    <!-- Video Preview Section Starts Here -->
+    <section class="video-preview" id="videoPreview">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6 text-center" data-aos="zoom-in">
+                    <div class="video-background">
+                        <!-- Background Image with Play Button -->
+                        <div class="video-overlay">
+                            <img src="assets/images/video_preview.jpg" alt="Background Image">
+                            <a href="#" id="playButton" class="play-button">
+                                <i class="ri-play-line"></i>
+                            </a>
+                        </div>
+
+                        <!-- Video Container -->
+                        <div id="videoContainer" class="video-container">
+                            <video id="projectVideo" width="100%" height="100%" controls>
+                                <source src="assets/images/video_symptoscan.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Preview Section Ends Here -->
+
+
+    <!-- Application Section Starts Here -->
+    <section id="application" class="section-padding border-top">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Applications & Impacts</h1>
+                        <div class="line"></div>
+                        <p>-Transforming Predictive Insights into Empowered Lives, One Disease at a Time-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="application-post image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/applications/1.jpg" alt="" width="300px" />
+                            <h5 class="mt-3">Proactive User Engagement</h5>
+                            <p style="text-align: justify;">Beyond predictions, SymptoScan actively engages users in
+                                their health journey, promoting informed decision-making and cultivating a culture of
+                                wellness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="application-post image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/applications/2.jpg" alt="" width="300px" />
+                            <h5 class="mt-3">Disease Prediction Prowess</h5>
+                            <p style="text-align: justify;">SymptoScan harnesses advanced machine learning to
+                                predict 41 diseases, providing users with early insights into potential health risks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="application-post image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/applications/3.jpg" alt="" width="300px" />
+                            <h5 class="mt-3">Societal Impact</h5>
+                            <p style="text-align: justify;">Contributing to public health awareness by
+                                democratizing access to early disease detection, fostering a culture of proactive health
+                                management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Application Section Ends Here -->
+
+    <!-- Collaborator Section Starts Here -->
+    <section id="collaborators" class="section-padding bg-light">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Collaborators</h1>
+                        <div class="line"></div>
+                        <p>-Uniting Visionaries, Revolutionizing Healthcare Together-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5 gx-3">
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="200">
+                    <div class="collaborator">
+                        <div class="collab-head theme-shadow p-4 bg-white">
+                            <div style="font-size: 30px; color: #4e57d4;">
+                                <i class="ri-bubble-chart-line"></i>
+                            </div>
+                            <p>
+                                I'm Abu Md. Masbah Uddin, a problem solver and lifelong learner,
+                                currently pursuing my BSc degree in CS at CUET.
+                            </p>
+                            <div class="social-icons_collab">
+                                <a href="https://github.com/ma5bah" target="_blank"><i class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/ma5bah" target="_blank"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/ma5bah/" target="_blank"><i
+                                        class="ri-linkedin-fill"></i></a>
+                                <a href="https://www.ma5bah.com/" target="_blank"><i class="ri-global-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="collab-person d-flex mt-4 align-items-center">
+                            <img src="./assets/images/Teams/masbah.jpg" alt="" width="50px" height="60px"
+                                style="border-radius: 8px;">
+                            <div class="ms-3">
+                                <h5>Masbah Uddin</h5>
+                                <small>CS Undergrad, CUET</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="300">
+                    <div class="collaborator">
+                        <div class="collab-head theme-shadow p-4 bg-white">
+                            <div style="font-size: 30px; color: #4e57d4;">
+                                <i class="ri-bubble-chart-line"></i>
+                            </div>
+                            <p>
+                                Hi, I'm Tofayel Ahmmed Babu, a problem solver and lifelong learner,
+                                currently pursuing my BSc degree in CS at CUET.
+                            </p>
+                            <div class="social-icons_collab">
+                                <a href="https://github.com/TofayelAhmmedBabu" target="_blank"><i
+                                        class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/ahmmed.tofayel.05" target="_blank"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/tofayelahmmedbabu/" target="_blank"><i
+                                        class="ri-linkedin-fill"></i></a>
+                                <a href="https://tofayelahmmedbabu.vercel.app/" target="_blank"><i
+                                        class="ri-global-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="collab-person d-flex mt-4 align-items-center">
+                            <img src="./assets/images/Teams/tofayel.jpg" alt="" width="50px" height="60px"
+                                style="border-radius: 8px;">
+                            <div class="ms-3">
+                                <h5>Tofayel Ahmmed</h5>
+                                <small>CS Undergrad, CUET</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="400">
+                    <div class="collaborator">
+                        <div class="collab-head theme-shadow p-4 bg-white">
+                            <div style="font-size: 30px; color: #4e57d4;">
+                                <i class="ri-bubble-chart-line"></i>
+                            </div>
+                            <p>
+                                Hi, I'm Md Hossan R., a problem solver and lifelong learner,
+                                currently pursuing my BSc degree in CS at CUET.
+                            </p>
+                            <div class="social-icons_collab">
+                                <a href="https://github.com/RJ-Hossan" target="_blank"><i
+                                        class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/Md.RefajHossan/" target="_blank"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/mdrefajhossan/" target="_blank"><i
+                                        class="ri-linkedin-fill"></i></a>
+                                <a href="https://refaj-hossan.vercel.app/" target="_blank"><i
+                                        class="ri-global-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="collab-person d-flex mt-4 align-items-center">
+                            <img src="./assets/images/Teams/refaj.jpg" alt="" width="50px" height="60px"
+                                style="border-radius: 8px;">
+                            <div class="ms-3">
+                                <h5>Md. Refaj Hossan</h5>
+                                <small>CS Undergrad, CUET</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="500">
+                    <div class="collaborator">
+                        <div class="collab-head theme-shadow p-4 bg-white">
+                            <div style="font-size: 30px; color: #4e57d4;">
+                                <i class="ri-bubble-chart-line"></i>
+                            </div>
+                            <p>
+                                Hi, I'm Sabik Aftahee, a problem solver and lifelong learner,
+                                currently pursuing my BSc degree in CS at CUET.
+                            </p>
+                            <div class="social-icons_collab">
+                                <a href="https://github.com/Pr0ximaCent" target="_blank"><i
+                                        class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/dot.quanta.007" target="_blank"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/sabik-aftahee-2017a617b/" target="_blank"><i
+                                        class="ri-linkedin-fill"></i></a>
+                                <a href="https://twitter.com/" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                            </div>
+                        </div>
+                        <div class="collab-person d-flex mt-4 align-items-center">
+                            <img src="./assets/images/Teams/sabik.jpg" alt="" width="50px" height="60px"
+                                style="border-radius: 8px;">
+                            <div class="ms-3">
+                                <h5>Sabik Aftahee</h5>
+                                <small>CS Undergrad, CUET</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Collaborators Section Ends Here -->
+
+    <!-- Contact Section Starts Here -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold text-white">Contact Us</h1>
+                        <div class="line bg-white"></div>
+                        <p class="text-white">
+                            -Get in touch-
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" data-aos="zoom-in-up">
+                <div class="col-lg-6">
+                    <form action="#" class="row g-4 p-lg-4 p-4 bg-white theme-shadow">
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" placeholder="Enter last name">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="email" class="form-control" placeholder="Enter mail address">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="text" class="form-control" placeholder="Enter subject">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <textarea name="message" rows="5" class="form-control"
+                                placeholder="Enter messages"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12 d-grid">
+                            <button class="btn btn-brand">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section Ends Here -->
+
+    <!-- Footer Section -->
+    <footer class="bg-light" data-aos="fade-up" data-aos-delay="175">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4 col-sm-6 p-8">
+                        <a href="">
+                            <img src="./assets/images/Brand_Logo.png" alt="" width="120px" height="50px">
+                        </a>
+                        <p style="text-align: justify;">Empowering Your Health Journey with Predictive Insights and
+                            Informed Wellness Choices
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="mt-5 mb-0 text-black">About</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#motivation">Motivation</a></li>
+                            <li><a href="#application">Applications</a></li>
+                            <li><a href="/structure.html">Project Structure</a></li>
+                            <li><a href="/features.html">Features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <h5 class="mt-5 mb-0 text-black">Contact</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>+880 15215 79196</li>
+                            <li>ignitedminds326@gmail.com</li>
+                            <li>Chattogram-4349, Bangladesh</li>
+                            <li><a href="/index.html">View Site</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p class="mt-4 mb-1 footer-bottom-last">© Copyright SymptoScan. All rights reserved | 2024</p>
+                        <p class="mb-1 footer-bottom-last">Developed by <a href="https://refaj-hossan.vercel.app/"
+                                target="_blank" style="text-decoration: underline;">Md Hossan R.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Ends Here -->
+
+    <!-- Vendor Js Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Js File -->
+    <script src="assets/main.js"></script>
+
+</body>
+<!-- Body Section Ends Here -->
+
+</html>
